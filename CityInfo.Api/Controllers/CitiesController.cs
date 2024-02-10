@@ -17,8 +17,7 @@ namespace CityInfo.Api.Controllers
                     {
                         new {id = 1, City = "Sari"},
                         new {id = 2, City = "Tehran"},
-                        new {id=3, City="Isfahan"
-                        }
+                        new {id=3, City="Isfahan"}
                     }
                 );
         }
