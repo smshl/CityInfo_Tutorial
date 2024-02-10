@@ -9,17 +9,20 @@ namespace CityInfo.Api.Controllers
     public class CitiesController : ControllerBase
     {
         [HttpGet()]
-        public JsonResult GetCities()
+        //public JsonResult GetCities()
+        public IActionResult GetCities()
         {
-            return new JsonResult
-                (
-                    new List<object>
-                    {
-                        new {id = 1, City = "Sari"},
-                        new {id = 2, City = "Tehran"},
-                        new {id=3, City="Isfahan"}
-                    }
-                );
+            return Ok(CitiesDataStore.instance.Cities);
+        }
+
+        [HttpGet("{id}")]
+        public ActionResult GetCity(int id)
+        {
+            var result = CitiesDataStore.instance.Cities.FirstOrDefault(c => c.Id == id);
+
+            if (result == null) return NotFound();
+
+            return Ok(result);
         }
     }
 }
