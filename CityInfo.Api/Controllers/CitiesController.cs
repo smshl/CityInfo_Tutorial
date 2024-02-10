@@ -4,7 +4,7 @@ using System.Reflection.Metadata.Ecma335;
 namespace CityInfo.Api.Controllers
 {
     [ApiController]
-    [Route("api/cities")]
+    [Route("api/Cities")]
     //[Route("api/[controller]")]
     public class CitiesController : ControllerBase
     {
@@ -17,7 +17,8 @@ namespace CityInfo.Api.Controllers
                     {
                         new {id = 1, City = "Sari"},
                         new {id = 2, City = "Tehran"},
-                        new {id=3, City="Isfahan"}
+                        new {id=3, City="Isfahan"
+                        }
                     }
                 );
         }
