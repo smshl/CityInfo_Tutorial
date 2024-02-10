@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System.Reflection.Metadata.Ecma335;
+using System.Reflection;
+using System.Text;
 
 namespace CityInfo.Api.Controllers
 {
@@ -8,6 +9,7 @@ namespace CityInfo.Api.Controllers
     //[Route("api/[controller]")]
     public class CitiesController : ControllerBase
     {
+
         [HttpGet()]
         //public JsonResult GetCities()
         public IActionResult GetCities()
@@ -21,6 +23,15 @@ namespace CityInfo.Api.Controllers
             var result = CitiesDataStore.instance.Cities.FirstOrDefault(c => c.Id == id);
 
             if (result == null) return NotFound();
+
+            return Ok(result);
+        }
+        [HttpGet("{cityId}/Places")]
+        public ActionResult GetPlaces(int cityId)
+        {
+            var result = CitiesDataStore.instance.Cities.Where(c => c.Id == cityId).FirstOrDefault().PointsOfView.ToList();
+
+            if(result == null) return NotFound();
 
             return Ok(result);
         }
