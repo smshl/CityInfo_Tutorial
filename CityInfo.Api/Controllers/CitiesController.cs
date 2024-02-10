@@ -4,8 +4,11 @@ using System.Reflection.Metadata.Ecma335;
 namespace CityInfo.Api.Controllers
 {
     [ApiController]
+    [Route("api/cities")]
+    //[Route("api/[controller]")]
     public class CitiesController : ControllerBase
     {
+        [HttpGet()]
         public JsonResult GetCities()
         {
             return new JsonResult
