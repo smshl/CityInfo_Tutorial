@@ -33,6 +33,9 @@ namespace CityInfo.Api.Controllers
         [HttpPost("new")]
         public ActionResult<PointOfViewDto> PostNewPointOfView(int cityId, PointOfViewDtoForCreation pointOfViewDto)
         {
+            if (!ModelState.IsValid) return BadRequest();
+
+
             var city = CitiesDataStore.instance.Cities.FirstOrDefault(c => c.Id == cityId);
 
             if (city == null) return NotFound();
