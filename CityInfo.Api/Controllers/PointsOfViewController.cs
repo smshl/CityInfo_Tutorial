@@ -54,5 +54,22 @@ namespace CityInfo.Api.Controllers
             return CreatedAtAction("GetPointsOfView", new { cityId = cityId, viewId = newPoint.Id }, newPoint);
 
         }
+
+        [HttpPut("update/{viewId}")]
+        public ActionResult<PointOfViewDto> UpdatePointOfView(int cityId, int viewId, PointOfViewDtoForUpdate pointOfView)
+        {
+            var city = CitiesDataStore.instance.Cities.FirstOrDefault(c => c.Id == cityId);
+
+            if (city == null) return NotFound();
+
+            var pointToEdit = city.PointsOfView.FirstOrDefault(p => p.Id == viewId);
+
+            if (pointToEdit == null) return NotFound();
+
+            pointToEdit.Name = pointOfView.Name;
+            pointToEdit.Description = pointOfView.Description;
+
+            return NoContent();
+        }
     }
 }
