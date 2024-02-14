@@ -1,4 +1,6 @@
-﻿namespace CityInfo.Api.Models
+﻿using CityInfo.Api.Controllers;
+
+namespace CityInfo.Api.Models
 {
     public class CityDto
     {

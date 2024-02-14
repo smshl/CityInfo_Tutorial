@@ -16,7 +16,7 @@ namespace CityInfo.Api.Controllers
 
             return Ok(result);
         }
-        [HttpGet("{viewId}")]
+        [HttpGet("{viewId}", Name = "GetPointsOfView")]
         public IActionResult GetPointsOfView(int cityId, int viewId)
         {
             var city = CitiesDataStore.instance.Cities.FirstOrDefault(c => c.Id == cityId);
@@ -28,6 +28,48 @@ namespace CityInfo.Api.Controllers
             if (result == null) return NotFound();
 
             return Ok(result);
+        }
+
+        [HttpPost("new")]
+        public ActionResult<PointOfViewDto> PostNewPointOfView(int cityId, PointOfViewDtoForCreation pointOfViewDto)
+        {
+            if (!ModelState.IsValid) return BadRequest();
+
+
+            var city = CitiesDataStore.instance.Cities.FirstOrDefault(c => c.Id == cityId);
+
+            if (city == null) return NotFound();
+
+            var maxPointId = CitiesDataStore.instance.Cities.SelectMany(c => c.PointsOfView).Max(p => p.Id);
+
+            PointOfViewDto newPoint = new PointOfViewDto
+            {
+                Id = ++maxPointId,
+                Name = pointOfViewDto.Name,
+                Description = pointOfViewDto.Description,
+            };
+
+            city.PointsOfView.Add(newPoint);
+
+            return CreatedAtAction("GetPointsOfView", new { cityId = cityId, viewId = newPoint.Id }, newPoint);
+
+        }
+
+        [HttpPut("update/{viewId}")]
+        public ActionResult<PointOfViewDto> UpdatePointOfView(int cityId, int viewId, PointOfViewDtoForUpdate pointOfView)
+        {
+            var city = CitiesDataStore.instance.Cities.FirstOrDefault(c => c.Id == cityId);
+
+            if (city == null) return NotFound();
+
+            var pointToEdit = city.PointsOfView.FirstOrDefault(p => p.Id == viewId);
+
+            if (pointToEdit == null) return NotFound();
+
+            pointToEdit.Name = pointOfView.Name;
+            pointToEdit.Description = pointOfView.Description;
+
+            return NoContent();
         }
     }
 }
