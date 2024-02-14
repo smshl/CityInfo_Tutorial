@@ -1,5 +1,6 @@
 ﻿using CityInfo.Api.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.JsonPatch;
 
 namespace CityInfo.Api.Controllers
 {
@@ -71,5 +72,27 @@ namespace CityInfo.Api.Controllers
 
             return NoContent();
         }
+
+        [HttpPatch("update/{viewId}/patch")]
+        public ActionResult<PointOfViewDto> UpdatePointOfViewWithPatch(int cityId, int viewId, JsonPatchDocument<PointOfViewDtoForUpdate> patchDocument)
+        {
+            var city = CitiesDataStore.instance.Cities.FirstOrDefault(c => c.Id == cityId);
+            if (city == null) return NotFound();
+
+            var point = city.PointsOfView.FirstOrDefault(p => p.Id == viewId);
+            if(point == null) return NotFound();
+
+            PointOfViewDtoForUpdate updatedPoint = new PointOfViewDtoForUpdate { Name = point.Name, Description = point.Description };
+
+            patchDocument.ApplyTo(updatedPoint, ModelState);
+
+            if (!ModelState.IsValid) return BadRequest();
+
+            point.Name = updatedPoint.Name;
+            point.Description = updatedPoint.Description;
+
+            return NoContent();
+        }
+
     }
 }

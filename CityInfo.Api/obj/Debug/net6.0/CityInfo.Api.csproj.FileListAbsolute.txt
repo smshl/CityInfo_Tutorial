@@ -31,3 +31,7 @@ C:\Users\mshoj\source\repos\CityInfo.Api\CityInfo.Api\obj\Debug\net6.0\CityInfo.
 C:\Users\mshoj\source\repos\CityInfo.Api\CityInfo.Api\obj\Debug\net6.0\CityInfo.Api.genruntimeconfig.cache
 C:\Users\mshoj\source\repos\CityInfo.Api\CityInfo.Api\obj\Debug\net6.0\ref\CityInfo.Api.dll
 C:\Users\mshoj\source\repos\CityInfo.Api\CityInfo.Api\bin\Debug\net6.0\ProfilePhoto.rar
+C:\Users\mshoj\source\repos\CityInfo.Api\CityInfo.Api\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\mshoj\source\repos\CityInfo.Api\CityInfo.Api\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\mshoj\source\repos\CityInfo.Api\CityInfo.Api\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\mshoj\source\repos\CityInfo.Api\CityInfo.Api\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
