@@ -88,6 +88,8 @@ namespace CityInfo.Api.Controllers
 
             if (!ModelState.IsValid) return BadRequest();
 
+            if (!TryValidateModel(updatedPoint)) return BadRequest(modelState: ModelState);
+
             point.Name = updatedPoint.Name;
             point.Description = updatedPoint.Description;
 
