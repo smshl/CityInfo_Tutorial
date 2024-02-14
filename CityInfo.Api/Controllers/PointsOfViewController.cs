@@ -88,8 +88,24 @@ namespace CityInfo.Api.Controllers
 
             if (!ModelState.IsValid) return BadRequest();
 
+            if (!TryValidateModel(updatedPoint)) return BadRequest(modelState: ModelState);
+
             point.Name = updatedPoint.Name;
             point.Description = updatedPoint.Description;
+
+            return NoContent();
+        }
+
+        [HttpDelete("delete/{viewId}")]
+        public ActionResult DeletePointOfView(int cityId, int viewId)
+        {
+            var city = CitiesDataStore.instance.Cities.FirstOrDefault(c => c.Id == cityId);
+            if (city == null) return NotFound();
+
+            var point = city.PointsOfView.FirstOrDefault(p => p.Id == viewId);
+            if (point == null) return NotFound();
+
+            city.PointsOfView.Remove(point);
 
             return NoContent();
         }
