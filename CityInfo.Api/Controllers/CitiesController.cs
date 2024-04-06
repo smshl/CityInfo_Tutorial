@@ -10,6 +10,13 @@ namespace CityInfo.Api.Controllers
     //[Route("api/[controller]")]
     public class CitiesController : ControllerBase
     {
+        private readonly ILogger<CitiesController> _logger;
+
+        public CitiesController(ILogger<CitiesController> logger)
+        {
+            _logger = logger;
+        }
+
 
         [HttpGet()]
         //public JsonResult GetCities()
@@ -23,7 +30,11 @@ namespace CityInfo.Api.Controllers
         {
             var result = CitiesDataStore.instance.Cities.FirstOrDefault(c => c.Id == id);
 
-            if (result == null) return NotFound();
+            if (result == null)
+            {
+                _logger.LogCritical("fuck yooou");
+                return NotFound();
+            }
 
             return Ok(result);
         }
@@ -32,7 +43,7 @@ namespace CityInfo.Api.Controllers
         {
             var result = CitiesDataStore.instance.Cities.Where(c => c.Id == cityId).FirstOrDefault().PointsOfView.ToList();
 
-            if(result == null) return NotFound();
+            if (result == null) return NotFound();
 
             return Ok(result);
         }

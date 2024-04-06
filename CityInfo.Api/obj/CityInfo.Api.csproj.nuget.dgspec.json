@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mshoj\\source\\repos\\CityInfo.Api\\CityInfo.Api\\CityInfo.Api.csproj": {}
+    "C:\\Users\\Leno\\source\\repos\\CityInfo_Tutorial\\CityInfo.Api\\CityInfo.Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mshoj\\source\\repos\\CityInfo.Api\\CityInfo.Api\\CityInfo.Api.csproj": {
+    "C:\\Users\\Leno\\source\\repos\\CityInfo_Tutorial\\CityInfo.Api\\CityInfo.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mshoj\\source\\repos\\CityInfo.Api\\CityInfo.Api\\CityInfo.Api.csproj",
+        "projectUniqueName": "C:\\Users\\Leno\\source\\repos\\CityInfo_Tutorial\\CityInfo.Api\\CityInfo.Api.csproj",
         "projectName": "CityInfo.Api",
-        "projectPath": "C:\\Users\\mshoj\\source\\repos\\CityInfo.Api\\CityInfo.Api\\CityInfo.Api.csproj",
-        "packagesPath": "C:\\Users\\mshoj\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mshoj\\source\\repos\\CityInfo.Api\\CityInfo.Api\\obj\\",
+        "projectPath": "C:\\Users\\Leno\\source\\repos\\CityInfo_Tutorial\\CityInfo.Api\\CityInfo.Api.csproj",
+        "packagesPath": "C:\\Users\\Leno\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Leno\\source\\repos\\CityInfo_Tutorial\\CityInfo.Api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "D:\\Program Files\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\mshoj\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Leno\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -38,6 +39,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -68,6 +74,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.28, 6.0.28]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[6.0.28, 6.0.28]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.28, 6.0.28]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.28, 6.0.28]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -76,7 +100,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

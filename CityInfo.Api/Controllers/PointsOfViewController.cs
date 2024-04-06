@@ -8,12 +8,24 @@ namespace CityInfo.Api.Controllers
     [Route("api/Cities/{cityId}/pointsofview")]
     public class PointsOfViewController : ControllerBase
     {
+        private readonly ILogger<PointsOfViewController> _logger;
+
+        public PointsOfViewController(ILogger<PointsOfViewController> logger)
+        {
+            _logger = logger;
+        }
+
+
         [HttpGet("GetAll")]
         public ActionResult<List<PointOfViewDto>> GetAllPointsOfView(int cityId)
         {
             var result =  CitiesDataStore.instance.Cities.Where(c => c.Id == cityId).SelectMany(p => p.PointsOfView).ToList();
 
-            if (result == null) return NotFound();
+            if (result == null)
+            {
+                _logger.LogCritical($"city with id {cityId} not found! ha ha ha");
+                return NotFound();
+            }
 
             return Ok(result);
         }
