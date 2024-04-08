@@ -1,8 +1,18 @@
 using Microsoft.AspNetCore.StaticFiles;
+using Serilog;
+
+
+Log.Logger = new LoggerConfiguration()
+    .MinimumLevel.Debug()
+    .WriteTo.Console()
+    .WriteTo.File(path: "logs/logs.txt" , rollingInterval: RollingInterval.Day)
+    .CreateLogger();
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+builder.Host.UseSerilog();
 
 builder.Services.AddControllers(options =>
 {

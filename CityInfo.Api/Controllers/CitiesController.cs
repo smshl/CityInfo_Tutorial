@@ -32,7 +32,7 @@ namespace CityInfo.Api.Controllers
 
             if (result == null)
             {
-                _logger.LogCritical("fuck yooou");
+                _logger.LogCritical("this is a test from critical logger");
                 return NotFound();
             }
 
