@@ -1,8 +1,8 @@
 ﻿using CityInfo.Api.Models;
 
-namespace CityInfo.Api
+namespace CityInfo.Api.DataStore
 {
-    public class CitiesDataStore
+    public class CitiesDataStore : IDataStore
     {
         public List<CityDto> Cities { get; set; }
 

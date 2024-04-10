@@ -1,6 +1,7 @@
 ﻿using CityInfo.Api.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.JsonPatch;
+using CityInfo.Api.DataStore;
 
 namespace CityInfo.Api.Controllers
 {
