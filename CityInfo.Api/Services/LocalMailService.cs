@@ -1,5 +1,6 @@
 ﻿using System.Net;
 using System.Net.Mail;
+using System.Reflection.Metadata.Ecma335;
 
 namespace CityInfo.Api.Services
 {
@@ -14,11 +15,17 @@ namespace CityInfo.Api.Services
             _mailTo = configuration["MailAddresses:MailTo"];
         }
 
+
+        public string mailFrom => _mailFrom;
+
+        public string mailTo => _mailTo;
+
+
         public void Send(string subject, string body)
         {
             Console.WriteLine($"mail was sent from: {_mailFrom} to {_mailTo}");
             Console.WriteLine($"subject: {subject}");
-            Console.WriteLine($"message: {body}, this email was sent from LocalMailService");
+            Console.WriteLine($"message: {body}, this email was sent from LocalMailService , from {_mailFrom} to {_mailTo}");
         }
 
         public static void SendEmail(string emailBody)

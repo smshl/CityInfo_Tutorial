@@ -61,3 +61,4 @@ C:\Users\Leno\source\repos\CityInfo_Tutorial\CityInfo.Api\obj\Release\net6.0\ref
 C:\Users\Leno\source\repos\CityInfo_Tutorial\CityInfo.Api\obj\Release\net6.0\CityInfo.Api.pdb
 C:\Users\Leno\source\repos\CityInfo_Tutorial\CityInfo.Api\obj\Release\net6.0\CityInfo.Api.genruntimeconfig.cache
 C:\Users\Leno\source\repos\CityInfo_Tutorial\CityInfo.Api\obj\Release\net6.0\ref\CityInfo.Api.dll
+C:\Users\Leno\source\repos\CityInfo_Tutorial\CityInfo.Api\bin\Release\net6.0\appsettings.Release.json
