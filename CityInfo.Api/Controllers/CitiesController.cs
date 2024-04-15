@@ -41,7 +41,7 @@ namespace CityInfo.Api.Controllers
                 _logger.LogCritical("this is a test from critical logger");
                 try
                 {
-                    _mailService.Send(subject: "test email" , body: "this is a test body from a service i created :)");
+                    _mailService.Send(subject: "test email" , body: $"this is a test body from a service i created , {_mailService} :)");
                 }
                 catch (Exception e)
                 {
