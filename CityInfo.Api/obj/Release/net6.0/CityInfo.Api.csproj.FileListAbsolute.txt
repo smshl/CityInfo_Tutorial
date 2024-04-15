@@ -61,4 +61,11 @@ C:\Users\Leno\source\repos\CityInfo_Tutorial\CityInfo.Api\obj\Release\net6.0\ref
 C:\Users\Leno\source\repos\CityInfo_Tutorial\CityInfo.Api\obj\Release\net6.0\CityInfo.Api.pdb
 C:\Users\Leno\source\repos\CityInfo_Tutorial\CityInfo.Api\obj\Release\net6.0\CityInfo.Api.genruntimeconfig.cache
 C:\Users\Leno\source\repos\CityInfo_Tutorial\CityInfo.Api\obj\Release\net6.0\ref\CityInfo.Api.dll
-C:\Users\Leno\source\repos\CityInfo_Tutorial\CityInfo.Api\bin\Release\net6.0\appsettings.Release.json
+C:\Users\Leno\source\repos\CityInfo_Tutorial\CityInfo.Api\bin\Release\net6.0\appsettings.Production.json
+C:\Users\Leno\source\repos\CityInfo_Tutorial\CityInfo.Api\bin\Release\net6.0\Microsoft.Data.Sqlite.dll
+C:\Users\Leno\source\repos\CityInfo_Tutorial\CityInfo.Api\bin\Release\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Leno\source\repos\CityInfo_Tutorial\CityInfo.Api\bin\Release\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Leno\source\repos\CityInfo_Tutorial\CityInfo.Api\bin\Release\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Leno\source\repos\CityInfo_Tutorial\CityInfo.Api\bin\Release\net6.0\Microsoft.EntityFrameworkCore.Sqlite.dll
+C:\Users\Leno\source\repos\CityInfo_Tutorial\CityInfo.Api\bin\Release\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\Leno\source\repos\CityInfo_Tutorial\CityInfo.Api\bin\Release\net6.0\SQLitePCLRaw.core.dll
