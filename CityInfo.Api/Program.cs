@@ -2,13 +2,14 @@ using CityInfo.Api.DataStore;
 using CityInfo.Api.DbContexts;
 using CityInfo.Api.Services;
 using Microsoft.AspNetCore.StaticFiles;
+using Microsoft.EntityFrameworkCore;
 using Serilog;
 
 
 Log.Logger = new LoggerConfiguration()
     .MinimumLevel.Debug()
     .WriteTo.Console()
-    .WriteTo.File(path: "logs/logs.txt" , rollingInterval: RollingInterval.Day)
+    .WriteTo.File(path: "logs/logs.txt", rollingInterval: RollingInterval.Day)
     .CreateLogger();
 
 var builder = WebApplication.CreateBuilder(args);
@@ -27,7 +28,10 @@ builder.Services.AddControllers(options =>
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddSingleton<FileExtensionContentTypeProvider>();
-builder.Services.AddDbContext<CityInfoDbContext>();
+builder.Services.AddDbContext<CityInfoDbContext>(option =>
+{
+    option.UseSqlite("Data Source = CityInfo.DB");
+});
 
 #if DEBUG
 builder.Services.AddScoped<IMailService, LocalMailService>(); //if our service changes, we just change the implementation class, its beautiful :)

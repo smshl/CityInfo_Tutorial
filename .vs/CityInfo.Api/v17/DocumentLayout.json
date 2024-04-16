@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Leno\\source\\repos\\CityInfo_Tutorial\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B377B370-41AF-4B87-A30C-BAC0A858BC5A}|CityInfo.Api\\CityInfo.Api.csproj|c:\\users\\leno\\source\\repos\\cityinfo_tutorial\\cityinfo.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B377B370-41AF-4B87-A30C-BAC0A858BC5A}|CityInfo.Api\\CityInfo.Api.csproj|solutionrelative:cityinfo.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B377B370-41AF-4B87-A30C-BAC0A858BC5A}|CityInfo.Api\\CityInfo.Api.csproj|c:\\users\\leno\\source\\repos\\cityinfo_tutorial\\cityinfo.api\\dbcontexts\\cityinfodbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B377B370-41AF-4B87-A30C-BAC0A858BC5A}|CityInfo.Api\\CityInfo.Api.csproj|solutionrelative:cityinfo.api\\dbcontexts\\cityinfodbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B377B370-41AF-4B87-A30C-BAC0A858BC5A}|CityInfo.Api\\CityInfo.Api.csproj|c:\\users\\leno\\source\\repos\\cityinfo_tutorial\\cityinfo.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B377B370-41AF-4B87-A30C-BAC0A858BC5A}|CityInfo.Api\\CityInfo.Api.csproj|solutionrelative:cityinfo.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,26 +42,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "CityInfoDbContext.cs",
               "DocumentMoniker": "C:\\Users\\Leno\\source\\repos\\CityInfo_Tutorial\\CityInfo.Api\\DbContexts\\CityInfoDbContext.cs",
               "RelativeDocumentMoniker": "CityInfo.Api\\DbContexts\\CityInfoDbContext.cs",
               "ToolTip": "C:\\Users\\Leno\\source\\repos\\CityInfo_Tutorial\\CityInfo.Api\\DbContexts\\CityInfoDbContext.cs",
               "RelativeToolTip": "CityInfo.Api\\DbContexts\\CityInfoDbContext.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAA4AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-16T18:54:44.926Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Leno\\source\\repos\\CityInfo_Tutorial\\CityInfo.Api\\Program.cs",
               "RelativeDocumentMoniker": "CityInfo.Api\\Program.cs",
               "ToolTip": "C:\\Users\\Leno\\source\\repos\\CityInfo_Tutorial\\CityInfo.Api\\Program.cs",
               "RelativeToolTip": "CityInfo.Api\\Program.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAAACYAAAAAAAAA",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAAACAAAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-10T15:14:37.836Z",
               "EditorCaption": ""
