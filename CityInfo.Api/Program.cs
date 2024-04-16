@@ -1,4 +1,5 @@
 using CityInfo.Api.DataStore;
+using CityInfo.Api.DbContexts;
 using CityInfo.Api.Services;
 using Microsoft.AspNetCore.StaticFiles;
 using Serilog;
@@ -26,6 +27,7 @@ builder.Services.AddControllers(options =>
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddSingleton<FileExtensionContentTypeProvider>();
+builder.Services.AddDbContext<CityInfoDbContext>();
 
 #if DEBUG
 builder.Services.AddScoped<IMailService, LocalMailService>(); //if our service changes, we just change the implementation class, its beautiful :)
